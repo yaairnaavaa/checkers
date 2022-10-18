@@ -24,6 +24,8 @@ export interface CheckersMsgPlayMoveResponse {
   winner?: string;
 }
 
+export type CheckersMsgRejectGameResponse = object;
+
 /**
  * Params defines the parameters for the module.
  */
@@ -56,7 +58,7 @@ export interface CheckersQueryGetSystemInfoResponse {
  * QueryParamsResponse is response type for the Query/Params RPC method.
  */
 export interface CheckersQueryParamsResponse {
-  /** params holds all the parameters of this module. */
+  /** Params defines the parameters for the module. */
   params?: CheckersParams;
 }
 
@@ -66,6 +68,9 @@ export interface CheckersStoredGame {
   turn?: string;
   black?: string;
   red?: string;
+
+  /** @format uint64 */
+  moveCount?: string;
 }
 
 export interface CheckersSystemInfo {
